@@ -1,7 +1,14 @@
 import { Button, Form, Row, Col } from "react-bootstrap";
 import useCategorias from '../hooks/useCategorias'
+import { useState } from "react";
+
 
 const Formulario = () => {
+
+    const [busqueda, setBusqueda] = useState({
+        nombre:'',
+        categoria:''
+    })
 
     const { categorias } = useCategorias()
 
@@ -16,10 +23,15 @@ const Formulario = () => {
 
                         <Form.Control
                             id="nombre"
-                            name="nombre"
+                            name="nombre"                            
                             type="text"
                             placeholder="Ej: Tequila, Vodka, etc..."
                             className="border border-2"
+                            value={busqueda.nombre}
+                                onChange={e => setBusqueda({
+                                    ...busqueda,
+                                    [e.target.name] : e.target.value
+                                })}
                         />
                     </Form.Group>
                 </Col>
@@ -30,6 +42,11 @@ const Formulario = () => {
                             <Form.Select
                                 id="categoria"
                                 name="categoria"
+                                value={busqueda.categoria}
+                                onChange={e => setBusqueda({
+                                    ...busqueda,
+                                    [e.target.name] : e.target.value
+                                })}
                             >
                                 <option>- Selecciona Categoría -</option>
                                 {categorias.map( categoria =>
