@@ -42,6 +42,17 @@ const Formulario = () => {
                         </Form.Group>
                 </Col>
             </Row>
+
+            <Row className="justify-content-end">
+                <Col md={3}>
+                    <Button
+                        variant="danger"
+                        className="text-uppercase w-100"
+                    >
+                        Buscar Bebidas
+                    </Button>
+                </Col>
+            </Row>
         </Form>
     )
 }
