@@ -59,7 +59,7 @@ const Formulario = () => {
                 </Col>
                 <Col md={6}>
                     <Form.Group className="mb-3">
-                            <Form.Label htmlFor='categoria'>Categoría Bebida</Form.Label>
+                            <Form.Label htmlFor='categoria'>Categoría Bebidas</Form.Label>
 
                             <Form.Select
                                 id="categoria"
