@@ -3,6 +3,7 @@ import { Formulario } from './components/Formulario'
 import { CategoriasProvider } from './context/CategoriasProvider'
 import { BebidasProvider } from './context/BebidasProvider'
 import { ListadoBebidas } from './components/ListadoBebidas'
+import { ModalBebida } from './components/ModalBebida'
 
 
 function App() {
@@ -19,7 +20,10 @@ function App() {
           className='mt-5'
         >
           <Formulario/>
+
           <ListadoBebidas/>
+          
+          <ModalBebida/>
         </Container>
         
       </BebidasProvider>
